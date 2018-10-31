@@ -19,7 +19,8 @@
 	<link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/index.css">
-	<title>乐淘商城</title>
+	<link rel="stylesheet" href="css/search.css">
+	<title>商品列表</title>
 </head>
 <body>
 <!--首页内容-->
@@ -28,8 +29,7 @@
 	<!--头部-->
 	<header class="ct_header">
 		<a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
-		<h3>乐淘云购</h3>
-		<a href="search.html" class="right"><span class="fa fa-search"></span></a>
+		<h3>商品列表</h3>
 	</header>
 	<!--内容区-->
 	<div class="ct_content">
@@ -37,76 +37,21 @@
 			<!--滑动区域-->
 			<div class="mui-scroll-wrapper">
 				<div class="mui-scroll">
-					<!--图片轮播-->
-					<div class="mui-slider">
-						<div class="mui-slider-group mui-slider-loop">
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner9.png" alt=""></a>
-							</div>
-							<!--第一个内容区容器-->
-							<div class="mui-slider-item">
-								<a href="javascript:;"><img src="images/banner1.png" alt=""></a>
-							</div>
-							<!--第二个内容区-->
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner2.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner3.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner4.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner5.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner6.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner7.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner8.jpg" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<!-- 具体内容 -->
-								<a href="javascript:;"><img src="images/banner9.png" alt=""></a>
-							</div>
-							<div class="mui-slider-item">
-								<a href="javascript:;"><img src="images/banner1.png" alt=""></a>
-							</div>
-						</div>
-						<div class="mui-slider-indicator">
-							<div class="mui-indicator mui-active"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-							<div class="mui-indicator"></div>
-						</div>
+					<div class="ct_search">
+						<!--虽然没用表单提交，但是加上form标签可以实现在移动端调用虚拟键盘的时候，enter键变成搜索按钮-->
+						<form action="">
+							<input type="text" placeholder="搜索你喜欢的商品">
+							<a href="javascript:;">搜索</a>
+						</form>
 					</div>
-					<!--导航-->
-					<nav class="ct_nav mui-clearfix">
-						<a href="javascript:;"><img src="images/nav1.png" alt=""></a>
-						<a href="javascript:;"><img src="images/nav2.png" alt=""></a>
-						<a href="javascript:;"><img src="images/nav3.png" alt=""></a>
-						<a href="javascript:;"><img src="images/nav4.png" alt=""></a>
-						<a href="javascript:;"><img src="images/nav5.png" alt=""></a>
-						<a href="javascript:;"><img src="images/nav6.png" alt=""></a>
-					</nav>
-					<!--商品区域-->
+
+					<!--排序-->
+					<div class="ct_order">
+						<a href="javascript:;">上架时间<span class="fa fa-angle-down"></span></a>
+						<a href="javascript:;">价格<span class="fa fa-angle-down"></span></a>
+						<a href="javascript:;">销量<span class="fa fa-angle-down"></span></a>
+						<a href="javascript:;">折扣<span class="fa fa-angle-down"></span></a>
+					</div>
 					<div class="ct_product">
 						<div class="pro_item">
 							<a href="javascript:;" class="pro_item_box">
@@ -187,14 +132,15 @@
 	</div>
 	<!--底部-->
 	<footer class="ct_footer">
-		<a class="tab_home fa fa-home now" href="index.html"><span>首页</span></a>
-		<a class="tab_cate fa fa-bars" href="category.html"><span>分类</span></a>
+		<a class="tab_home fa fa-home" href="index.html"><span>首页</span></a>
+		<a class="tab_cate fa fa-bars now" href="category.html&id=1"><span>分类</span></a>
 		<a class="tab_cart fa fa-shopping-cart" href="cart.html"><span>购物车</span></a>
 		<a class="tab_user fa fa-user" href="user/index.html"><span>会员中心</span></a>
 	</footer>
 </div>
 <script src="assets/mui/js/mui.js"></script>
 <script src="assets/zepto/zepto.min.js"></script>
-<script src="js/index.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/searchList.js"></script>
 </body>
 </html>
